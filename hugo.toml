@@ -9,6 +9,9 @@ theme = 'PaperMod'
   keywords = ['red team', 'penetration testing', 'cybersecurity', 'offensive security', 'hacking']
   author = '0x_alibabas'
   
+  # Analytics disabled
+  googleAnalytics = ''
+  
   # Theme settings
   defaultTheme = 'dark'
   disableThemeToggle = false
