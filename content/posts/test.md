@@ -1,14 +1,13 @@
 +++
 date = '2025-09-09T15:35:11-03:00'
 draft = false
-title = 'Welcome to 0x\_alibabas'
+title = 'Welcome to 0x_alibabas'
 description = 'First post of the blog'
 tags = ['red-team', 'offsec', 'vulnerability-research', 'bugbounty']
 +++
 
-# Welcome to 0x\_alibabas
 
-I finally decided to start this blog to share my journey in **red team operations**, **vulnerability research**, and the things I learn (or break) along the way.
+I finally decided to start this blog to share my journey in vulnerability research, and the things I learn (or break) along the way.
 
 The goal here is not to write perfect guides. It is to document:
 
