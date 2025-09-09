@@ -26,6 +26,7 @@ Here's a disclosure I've published so far:
 ## Find me
 
 * GitHub: [@0x_alibabas](https://github.com/0xalibabas)
+* Twitter: [@0x_alibabas](https://x.com/0x_alibabas)
 * LinkedIn: [Giuliano Sanfins](https://www.linkedin.com/in/giuliano-sanfins/)
 
 [1]: https://nvd.nist.gov/vuln/detail/CVE-2025-36537 "CVE-2025-36537 Detail - NVD"
