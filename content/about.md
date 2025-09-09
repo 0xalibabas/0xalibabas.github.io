@@ -6,34 +6,27 @@ title = 'About'
 
 # About 0x_alibabas
 
-Welcome to my Red Team security blog! I'm a cybersecurity professional passionate about offensive security, penetration testing, and red team operations.
+I'm Giuliano Sanfins (0x_alibabas). I work in cybersecurity focusing on **red team operations**, **offensive security**, and **vulnerability research**.
 
-## What You'll Find Here
+My work includes:
 
-This blog focuses on:
+* Reporting vulnerabilities that became published **CVEs**
+* Participating in **bug bounty programs** and vendor security portals
+* Running penetration tests, red team operations, and phishing simulations
+* Sharing research and technical findings with teams and the security community
 
-- **Red Team Operations**: Real-world attack simulations and methodologies
-- **Penetration Testing**: Techniques, tools, and case studies
-- **Vulnerability Research**: CVE analysis and exploit development
-- **Security Tools**: Reviews and custom tool development
-- **Threat Intelligence**: Analysis of current threats and attack vectors
+## Advisories and CVEs
 
-## My Background
+Here's a disclosure I've published so far:
 
-I specialize in offensive security with experience in:
+* **CVE-2025-36537** – Incorrect Permission Assignment for Critical Resource in TeamViewer Remote Management (Windows). Allows a local unprivileged user to delete files with SYSTEM privileges via the MSI rollback mechanism. Fixed in TeamViewer 15.67. ([NVD][1], [TeamViewer][2])
 
-- Network penetration testing
-- Web application security
-- Social engineering
-- Physical security assessments
-- Red team exercises
+*(More advisories to be added…)*
 
-## Contact
+## Find me
 
-Feel free to reach out if you have questions about any of the content or want to discuss security topics. You can find me on:
+* GitHub: [@0x_alibabas](https://github.com/0xalibabas)
+* LinkedIn: [Giuliano Sanfins](https://www.linkedin.com/in/giuliano-sanfins/)
 
-- GitHub: [@0xalibabas](https://github.com/0xalibabas)
-
----
-
-*"The best defense is understanding the offense."*
+[1]: https://nvd.nist.gov/vuln/detail/CVE-2025-36537 "CVE-2025-36537 Detail - NVD"
+[2]: https://www.teamviewer.com/en-us/resources/trust-center/security-bulletins/tv-2025-1002/ "TV-2025-1002"
