@@ -11,10 +11,10 @@ I finally decided to start this blog to share my journey in vulnerability resear
 
 The goal here is not to write perfect guides. It is to document:
 
-* techniques I use or study
-* research that often turns into bug bounty reports
-* write-ups when possible
-* and thoughts on offensive security in general
+* Techniques I use or study
+* Research that often turns into bug bounty reports
+* Write-ups when possible
+* And thoughts on offensive security in general
 
 You can expect real-world cases when I am able to share them, PoCs, interesting bugs, and also mistakes that ended up teaching me valuable lessons.
 
