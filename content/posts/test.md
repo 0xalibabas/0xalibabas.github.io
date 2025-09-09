@@ -3,7 +3,7 @@ date = '2025-09-09T15:35:11-03:00'
 draft = false
 title = 'Welcome to 0x\_alibabas'
 description = 'First post of the blog'
-tags = \['red-team', 'offsec', 'vulnerability-research', 'bugbounty']
+tags = ['red-team', 'offsec', 'vulnerability-research', 'bugbounty']
 +++
 
 # Welcome to 0x\_alibabas
