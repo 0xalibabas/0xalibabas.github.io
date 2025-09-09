@@ -1,0 +1,69 @@
+baseURL = 'https://0xalibabas.github.io/'
+languageCode = 'en-us'
+title = '0x_alibabas - Red Team Security Blog'
+theme = 'PaperMod'
+
+[params]
+  env = 'production'
+  description = 'Red Team security research, penetration testing, and offensive security insights'
+  keywords = ['red team', 'penetration testing', 'cybersecurity', 'offensive security', 'hacking']
+  author = '0x_alibabas'
+  
+  # Theme settings
+  defaultTheme = 'dark'
+  disableThemeToggle = false
+  
+  # Social links
+  [params.social]
+    GitHub = 'https://github.com/0xalibabas'
+    Twitter = ''
+    LinkedIn = ''
+    
+  # Menu
+  [[menu.main]]
+    identifier = 'home'
+    name = 'Home'
+    url = '/'
+    weight = 10
+    
+  [[menu.main]]
+    identifier = 'posts'
+    name = 'Posts'
+    url = '/posts/'
+    weight = 20
+    
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 30
+    
+  [[menu.main]]
+    identifier = 'contact'
+    name = 'Contact'
+    url = '/contact/'
+    weight = 40
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Sitemap configuration
+[sitemap]
+  changefreq = 'monthly'
+  priority = 0.5
+  filename = 'sitemap.xml'
+
+# Output formats
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+# Taxonomies
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+
+# Build settings
+[build]
+  writeStats = true
