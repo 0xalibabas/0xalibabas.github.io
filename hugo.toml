@@ -1,6 +1,6 @@
 baseURL = 'https://0xalibabas.github.io/'
 languageCode = 'en-us'
-title = '0x_alibabas - Red Team Security Blog'
+title = '0x_alibabas'
 theme = 'PaperMod'
 
 [params]
