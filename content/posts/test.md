@@ -1,7 +1,7 @@
 +++
 date = '2025-09-09T15:35:11-03:00'
 draft = false
-title = 'Welcome to 0x_alibabas'
+title = 'Welcome to my blog :)'
 description = 'First post of the blog'
 tags = ['red-team', 'offsec', 'vulnerability-research', 'bugbounty']
 +++
