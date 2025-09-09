@@ -1,10 +1,10 @@
 +++
 date = '2025-09-09T15:34:58-03:00'
 draft = false
-title = 'About'
+title = '# whoami'
 +++
 
-# About 0x_alibabas
+# About me
 
 I'm Giuliano Sanfins (0x_alibabas). I work in cybersecurity focusing on **red team operations**, **offensive security**, and **vulnerability research**.
 
