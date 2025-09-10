@@ -25,7 +25,7 @@ Here's a disclosure I've published so far:
 
 ## Find me
 
-* GitHub: [@0x_alibabas](https://github.com/0xalibabas)
+* Discord: alibabas
 * Twitter: [@0x_alibabas](https://x.com/0x_alibabas)
 * LinkedIn: [Giuliano Sanfins](https://www.linkedin.com/in/giuliano-sanfins/)
 
