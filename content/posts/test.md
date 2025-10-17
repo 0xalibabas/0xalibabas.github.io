@@ -6,8 +6,7 @@ description = 'First post of the blog'
 tags = ['red-team', 'offsec', 'vulnerability-research', 'bugbounty']
 +++
 
-
-I finally decided to start this blog to share my journey in vulnerability research, and the things I learn (or break) along the way.
+Welcome. This blog serves as a public notebook for my work in offensive security and vulnerability research.
 
 The goal here is not to write perfect guides. It is to document:
 
@@ -16,6 +15,4 @@ The goal here is not to write perfect guides. It is to document:
 * Write-ups when possible
 * And thoughts on offensive security in general
 
-You can expect real-world cases when I am able to share them, PoCs, interesting bugs, and also mistakes that ended up teaching me valuable lessons.
-
-If you enjoy exploring how vulnerabilities appear, how to exploit Windows internals, or just want to follow the hands-on side of security, this blog is for you.
+This is a space for practical, hands-on security content. I hope you find it useful :)
