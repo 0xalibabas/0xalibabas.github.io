@@ -93,7 +93,7 @@ Don't get me wrong, performing security assessment on Windows apps is very cool,
 
 - Oct 9, 2025 - Reported to Zoho bug bounty
 - Oct 14, 2025 - Zoho replied saying it's an "expected behavior"
-- Oct 15, 2025 - I tell them that I'll write a quick blog to raise awareness, they've agreed
+- Oct 15, 2025 - When informed of my plan to publish, the vendor stated they would "neither explicitly allow nor prohibit" the disclosure
 - Oct 17, 2025 - Blog published
 
 

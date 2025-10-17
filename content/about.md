@@ -10,24 +10,22 @@ I'm Giuliano Sanfins (0x_alibabas). I work in cybersecurity focusing on **red te
 
 My work includes:
 
-* Reporting vulnerabilities that became published **CVEs**
+* Reporting vulnerabilities that became published CVEs
 * Participating in **bug bounty programs** and vendor security portals
 * Running penetration tests, red team operations, and phishing simulations
 * Sharing research and technical findings with teams and the security community
 
 ## Advisories and CVEs
 
-Here's a disclosure I've published so far:
+Some of my disclosed vulnerabilities:
 
-* **CVE-2025-36537** – Incorrect Permission Assignment for Critical Resource in TeamViewer Remote Management (Windows). Allows a local unprivileged user to delete files with SYSTEM privileges via the MSI rollback mechanism. Fixed in TeamViewer 15.67. ([NVD][1], [TeamViewer][2])
+* CVE-2025-36537 – TeamViewer Remote Management Arbitrary File Deletion via MSI Rollback. An unprivileged local user could leverage the MSI repair mechanism to delete arbitrary files with SYSTEM privileges. (ZDI-25-419)
+* CVE-2025-9871 – Razer Synapse 3 Chroma Connect Link Following Local Privilege Escalation Vulnerability. (ZDI-25-920)
+* CVE-2025-9870 – Razer Synapse 3 RazerPhilipsHueUninstall Link Following Local Privilege Escalation Vulnerability. (ZDI-25-921)
+* CVE-2025-9869 – Razer Synapse 3 Chroma SDK Server Unquoted Search Path Local Privilege Escalation Vulnerability. (ZDI-25-919)
 
-*(More advisories to be added…)*
-
-## Find me
+Connect
 
 * Discord: alibabas
 * Twitter: [@0x_alibabas](https://x.com/0x_alibabas)
 * LinkedIn: [Giuliano Sanfins](https://www.linkedin.com/in/giuliano-sanfins/)
-
-[1]: https://nvd.nist.gov/vuln/detail/CVE-2025-36537 "CVE-2025-36537 Detail - NVD"
-[2]: https://www.teamviewer.com/en-us/resources/trust-center/security-bulletins/tv-2025-1002/ "TV-2025-1002"
