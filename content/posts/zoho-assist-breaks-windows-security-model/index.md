@@ -1,10 +1,10 @@
-++
++++
 date = '2025-10-17T00:00:00-03:00'
 draft = false
 title = 'How zoho assist breaks the Windows security model'
 description = 'Zoho Assist unattended agent executes SYSTEM commands from lower integrity callers, breaking Windows security boundaries.'
 tags = ['windows', 'privilege-escalation', 'remote-support', 'security-model', 'zoho']
-++
++++
 
 My original plan for this first post was to kick things off with a series on Windows Internals and Windows apps bug bounty hunting. And I promise future posts won't be as "no actual exploit codes, just UI" as this one. However, security research happened. While analyzing a few applications, I came across an issue so weird and badly accepted that it deserved some attention.
 
