@@ -1,9 +1,9 @@
 ++
-date = '2025-11-16T00:00:00-03:00'
+date = '2025-10-17T00:00:00-03:00'
 draft = false
 title = 'How zoho assist breaks the Windows security model'
 description = 'Zoho Assist unattended agent executes SYSTEM commands from lower integrity callers, breaking Windows security boundaries.'
-tags = ['windows', 'privilege-escalation', 'remote-support', 'security-model', 'vendor']
+tags = ['windows', 'privilege-escalation', 'remote-support', 'security-model', 'zoho']
 ++
 
 My original plan for this first post was to kick things off with a series on Windows Internals and Windows apps bug bounty hunting. And I promise future posts won't be as "no actual exploit codes, just UI" as this one. However, security research happened. While analyzing a few applications, I came across an issue so weird and badly accepted that it deserved some attention.
@@ -12,7 +12,7 @@ This was the case with the Zoho Assist unattended agent. What appears to be a st
 
 So, for this first post, I'll say why you should not neglect security boundaries and explain why the presence of the Zoho agent should be treated as a direct local privilege escalation.
 
-![Zoho Assist UI](<images/Pasted image 20251017100314.png>)
+![Zoho Assist UI](</images/Pasted image 20251017100314.png>)
 
 ### **Why this matters**
 
@@ -35,7 +35,7 @@ If you’ve never heard of integrity levels, here’s a high-level summary. They
 
 In short: low is a sandbox, medium is your everyday user space, high is "Run as Administrator," and system is the service layer. When a medium integrity process can directly influence a system integrity process to execute arbitrary code, that’s a textbook privilege escalation.
 
-![Integrity diagram](<images/Pasted image 20251017101112.png>)
+![Integrity diagram](</images/Pasted image 20251017101112.png>)
 
 ### How to test
 
@@ -45,13 +45,13 @@ In short: low is a sandbox, medium is your everyday user space, high is "Run as 
 
 Spawning a SYSTEM cmd.exe:
 
-<video controls src="videos/zohoAssist_LPE.mp4"></video>
+<video controls src="/videos/zohoAssist_LPE.mp4"></video>
 
 Or just choose "send files" option on the current desktop session:
 
-<video controls src="videos/20251017_095948.mp4"></video>
+<video controls src="/videos/20251017_095948.mp4"></video>
 
-![Zoho file transfer](<images/Pasted image 20251017095509.png>)
+![Zoho file transfer](</images/Pasted image 20251017095509.png>)
 
 ### **Reporting to the Vendor**
 
@@ -61,7 +61,7 @@ Believing this to be a software design issue, I reported this through Zoho’s b
 > 
 > Thank you for the report. After investigation, we have confirmed that the reported behavior is expected. Please refer to the following link for more information: https://www.zoho.com/assist/help/unattended-access.html.
 
-![Zoho reply](<images/Pasted image 20251017093910.png>)
+![Zoho reply](</images/Pasted image 20251017093910.png>)
 
 Their own documentation confirms this design. What.
 The page they linked states that the agent is installed with "system-level privileges" to allow technicians to "perform administrative and troubleshooting tasks, even if the user logged into the remote device does not have administrative rights."
@@ -87,7 +87,7 @@ Zoho's response confirms this isn't an accidental bug but a deliberate design ch
 Tools like Zoho Assist are nice, but when their agent is designed to bridge medium and system contexts without any meaningful security controls, the software itself becomes a privilege escalation tool. Zoho's stance that this is "expected" is concerning, as it shifts the burden of this architectural flaw onto their customers.
 Don't get me wrong, performing security assessment on Windows apps is very cool, but unfortunately not all companies have the security maturity we'd like them to have....
 
-![Closing image](<images/Pasted image 20251017110355.png>)
+![Closing image](</images/Pasted image 20251017110355.png>)
 
 ### Timeline
 
