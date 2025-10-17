@@ -2,7 +2,6 @@
 date = '2025-10-17T00:00:00-03:00'
 draft = false
 title = 'How zoho assist breaks the Windows security model'
-description = 'Zoho Assist unattended agent executes SYSTEM commands from lower integrity callers, breaking Windows security boundaries.'
 tags = ['windows', 'privilege-escalation', 'remote-support', 'security-model', 'zoho']
 +++
 
