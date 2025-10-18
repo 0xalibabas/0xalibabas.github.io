@@ -5,7 +5,7 @@ title = 'How zoho assist breaks the Windows security model'
 tags = ['windows', 'privilege-escalation', 'remote-support', 'security-model', 'zoho']
 +++
 
-My original plan for this post was to kick things off with a series on Windows Internals and Windows apps bug bounty hunting. And I promise future posts won't be as "no actual exploit codes, just UI" as this one. However, security research happened. While analyzing a few applications, I came across an issue so weird and badly accepted that it deserved some attention.
+My original plan for this post was to kick things off with a series on Windows Internals and Windows apps bug bounty hunting focusing on exploit code and not just the "interface exploits". But while analyzing some applications, I came across a problem so strange and poorly recognized that it deserved attention. So, security research happened.
 
 This was the case with the Zoho Assist unattended agent. What appears to be a standard remote support tool is, in fact, an implementation with an architectural flaw that fundamentally breaks the Windows security model.
 
@@ -59,11 +59,11 @@ Believing this to be a software design issue, I reported this through Zoho’s b
 > Hi,
 > 
 > Thank you for the report. After investigation, we have confirmed that the reported behavior is expected. Please refer to the following link for more information: https://www.zoho.com/assist/help/unattended-access.html.
->
+> 
 
 ![Zoho reply](</images/Pasted image 20251017093910.png>)
 
-Their own documentation confirms this design. What.
+Their own documentation confirms this design. What, but why?
 The page they linked states that the agent is installed with "system-level privileges" to allow technicians to "perform administrative and troubleshooting tasks, even if the user logged into the remote device does not have administrative rights."
 
 So, they are openly documenting that their agent provides a built-in privilege escalation path and calling it a feature. Let's be clear: a local privilege escalation vector is not a feature you want running on your endpoints.

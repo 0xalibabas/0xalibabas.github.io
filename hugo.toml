@@ -16,6 +16,9 @@ theme = 'PaperMod'
   defaultTheme = 'dark'
   disableThemeToggle = false
   
+  # Favicon
+  favicon = '/favicon.ico'
+  
   # Social links
   [params.social]
     GitHub = 'https://github.com/0xalibabas'
