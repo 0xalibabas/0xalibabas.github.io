@@ -65,9 +65,11 @@
 <meta name="theme-color" content="#ff4444">
 <meta name="msapplication-TileColor" content="#ff4444">
 
-<!-- Theme-aware favicons: switch between dark/light automatically and on toggle -->
-<link id="favicon-dark" rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon/favicon-32x32.png" | absURL }}">
-<link id="favicon-light" rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon/white_favicon.png" | absURL }}">
+<!-- Theme-aware favicons (16x16 and 32x32) -->
+<link id="favicon-dark-16" rel="icon" type="image/png" sizes="16x16" href="{{ "images/favicon/favicon-16x16.png" | absURL }}">
+<link id="favicon-light-16" rel="icon" type="image/png" sizes="16x16" href="{{ "images/favicon/white_favicon-16x16.png" | absURL }}">
+<link id="favicon-dark-32" rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon/favicon-32x32.png" | absURL }}">
+<link id="favicon-light-32" rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon/white_favicon-32x32.png" | absURL }}">
 <script>
   (function() {
     function currentTheme() {
@@ -76,33 +78,43 @@
       return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
 
-    function applyFavicon(theme) {
-      var dark = document.getElementById('favicon-dark');
-      var light = document.getElementById('favicon-light');
-      if (!dark || !light) return;
-      var isDark = theme === 'dark';
-      dark.media = isDark ? 'all' : 'not all';
-      light.media = isDark ? 'not all' : 'all';
+    function setMedia(elDark, elLight, isDark) {
+      if (!elDark || !elLight) return;
+      elDark.media = isDark ? 'all' : 'not all';
+      elLight.media = isDark ? 'not all' : 'all';
     }
 
-    // Initial apply
-    applyFavicon(currentTheme());
+    function applyFavicons(theme) {
+      var isDark = theme === 'dark';
+      setMedia(
+        document.getElementById('favicon-dark-16'),
+        document.getElementById('favicon-light-16'),
+        isDark
+      );
+      setMedia(
+        document.getElementById('favicon-dark-32'),
+        document.getElementById('favicon-light-32'),
+        isDark
+      );
+    }
 
-    // Update on theme toggle button
+    // Initial
+    applyFavicons(currentTheme());
+
+    // On theme toggle
     document.addEventListener('DOMContentLoaded', function() {
       var btn = document.getElementById('theme-toggle');
       if (!btn) return;
       btn.addEventListener('click', function() {
         var theme = document.body.classList.contains('dark') ? 'dark' : 'light';
-        // PaperMod toggles class, but localStorage is updated after; derive from class
-        applyFavicon(theme);
+        applyFavicons(theme);
       });
     });
 
-    // Also react to OS scheme changes
+    // On OS scheme change
     try {
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-        applyFavicon(e.matches ? 'dark' : 'light');
+        applyFavicons(e.matches ? 'dark' : 'light');
       });
     } catch (e) {}
   })();
