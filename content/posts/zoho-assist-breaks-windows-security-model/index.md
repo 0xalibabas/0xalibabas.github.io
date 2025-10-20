@@ -38,7 +38,7 @@ In short: low is a sandbox, medium is your everyday user space, high is "Run as 
 
 ### How to test
 
-- Install Zoho Assist Desktop.
+- Install Zoho Assist Desktop and setup the unattended agent.
 - As a normal, non-admin user, connect to the machine from the Zoho mobile or second desktop client.
 - Anything you send from the remote user will be ran as SYSTEM, so either spawn a cmd.exe or just add a new admin account on the Windows host. 
 
@@ -51,6 +51,8 @@ Or just choose "send files" option on the current desktop session:
 <video controls src="/videos/20251017_095948.mp4"></video>
 
 ![Zoho file transfer](</images/Pasted image 20251017095509.png>)
+
+> Simple like that :)
 
 ### **Reporting to the Vendor**
 
