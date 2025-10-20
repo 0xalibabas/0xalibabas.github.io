@@ -22,6 +22,12 @@ theme = 'PaperMod'
     favicon16x16 = 'images/favicon-16x16.png'
     favicon32x32 = 'images/favicon-32x32.png'
   
+  # Header label logo (shown next to site title)
+  [params.label]
+    text = '0x_alibabas'
+    icon = 'images/favicon-32x32.png'
+    iconHeight = 30
+  
   # Social links
   [params.social]
     GitHub = 'https://github.com/0xalibabas'
