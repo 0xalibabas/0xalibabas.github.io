@@ -119,3 +119,41 @@
     } catch (e) {}
   })();
 </script>
+
+<!-- Theme-aware header logo (switch image source on theme change) -->
+<script>
+  (function() {
+    var logoDark = '{{ "images/favicon/favicon-32x32.png" | absURL }}';
+    var logoLight = '{{ "images/favicon/white_favicon-32x32.png" | absURL }}';
+
+    function currentTheme() {
+      var pref = localStorage.getItem('pref-theme');
+      if (pref === 'dark' || pref === 'light') return pref;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function applyLogo(theme) {
+      var img = document.querySelector('.logo img[aria-label="logo"]');
+      if (!img) return;
+      var expected = theme === 'dark' ? logoDark : logoLight;
+      if (img.getAttribute('src') !== expected) img.setAttribute('src', expected);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      applyLogo(currentTheme());
+      var btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.addEventListener('click', function() {
+          var theme = document.body.classList.contains('dark') ? 'dark' : 'light';
+          applyLogo(theme);
+        });
+      }
+    });
+
+    try {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        applyLogo(e.matches ? 'dark' : 'light');
+      });
+    } catch (e) {}
+  })();
+</script>
