@@ -65,11 +65,11 @@
 <meta name="theme-color" content="#ff4444">
 <meta name="msapplication-TileColor" content="#ff4444">
 
-<!-- Theme-aware favicons (16x16 and 32x32) -->
-<link id="favicon-dark-16" rel="icon" type="image/png" sizes="16x16" href="{{ "images/favicon/favicon-16x16.png" | absURL }}">
-<link id="favicon-light-16" rel="icon" type="image/png" sizes="16x16" href="{{ "images/favicon/white_favicon-16x16.png" | absURL }}">
-<link id="favicon-dark-32" rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon/favicon-32x32.png" | absURL }}">
-<link id="favicon-light-32" rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon/white_favicon-32x32.png" | absURL }}">
+<!-- Theme-aware favicons (single icon used for all) -->
+<link id="favicon-dark-16" rel="icon" type="image/png" sizes="16x16" href="{{ "images/favicon/icon.png" | absURL }}">
+<link id="favicon-light-16" rel="icon" type="image/png" sizes="16x16" href="{{ "images/favicon/icon.png" | absURL }}">
+<link id="favicon-dark-32" rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon/icon.png" | absURL }}">
+<link id="favicon-light-32" rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon/icon.png" | absURL }}">
 <script>
   (function() {
     function currentTheme() {
@@ -123,8 +123,8 @@
 <!-- Theme-aware header logo (switch image source on theme change) -->
 <script>
   (function() {
-    var logoDark = '{{ "images/favicon/favicon-32x32.png" | absURL }}';
-    var logoLight = '{{ "images/favicon/white_favicon-32x32.png" | absURL }}';
+    var logoDark = '{{ "images/favicon/icon.png" | absURL }}';
+    var logoLight = '{{ "images/favicon/icon.png" | absURL }}';
 
     function currentTheme() {
       var pref = localStorage.getItem('pref-theme');
