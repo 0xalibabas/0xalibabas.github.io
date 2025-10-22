@@ -1,11 +1,16 @@
 {{- /* Inject GA4 only in production and when an ID exists */ -}}
-{{- if and (or hugo.IsProduction (eq site.Params.env "production")) (site.GoogleAnalytics) -}}
+{{- if and (or hugo.IsProduction (eq .Site.Params.env "production")) (.Site.GoogleAnalytics) -}}
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.GoogleAnalytics }}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);} 
-  gtag('js', new Date());
-  gtag('config', '{{ site.GoogleAnalytics }}');
-</script>
+  (function() {
+    var allowedHostnames = ["0xalibabas.github.io"]; // ajuste se trocar de domínio
+    if (allowedHostnames.indexOf(location.hostname) === -1) return;
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', '{{ .Site.GoogleAnalytics }}');
+  })();
+  </script>
 {{- end -}}
