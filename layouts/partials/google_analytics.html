@@ -1,1 +1,11 @@
-<!-- Google Analytics disabled -->
+{{- /* Inject GA4 only in production and when an ID exists */ -}}
+{{- if and (or hugo.IsProduction (eq site.Params.env "production")) (site.GoogleAnalytics) -}}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.GoogleAnalytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);} 
+  gtag('js', new Date());
+  gtag('config', '{{ site.GoogleAnalytics }}');
+</script>
+{{- end -}}
