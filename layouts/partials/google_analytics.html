@@ -1,5 +1,5 @@
 {{- /* Inject GA4 only in production and when an ID exists */ -}}
-{{- $gaID := or .Site.GoogleAnalytics .Site.Config.Services.GoogleAnalytics.ID -}}
+{{- $gaID := .Site.Config.Services.GoogleAnalytics.ID -}}
 {{- if and (or hugo.IsProduction (eq .Site.Params.env "production")) $gaID -}}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ $gaID }}"></script>

@@ -78,3 +78,7 @@ googleAnalytics = 'G-DTS49DGF0V'
 # Build settings
 [build]
   writeStats = true
+
+[services]
+  [services.googleAnalytics]
+    id = 'G-DTS49DGF0V'
