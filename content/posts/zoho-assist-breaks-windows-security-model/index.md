@@ -29,10 +29,10 @@ If you’ve never heard of integrity levels, here’s a high-level summary. They
 | **Low**       | Browser sandboxes, UWP apps                 | Isolated; needs a broker to access most resources                |
 | **Medium**    | Normal user applications                    | The default for anything you run                                 |
 | **High**      | Elevated admin apps (after UAC)             | Can modify medium/low processes                                  |
-| **System**    | Services, core OS components                | Has "full" local privileges; the keys to the kingdom             |
-| **PPL**       | Hardened security services (Antivirus, DRM) | Even higher, access is controlled by its special signature level |
+| **System**    | Services, core OS components                | Has "full" local privileges;             						 |
 
-In short: low is a sandbox, medium is your everyday user space, high is "Run as Administrator," and system is the service layer. When a medium integrity process can directly influence a system integrity process to execute arbitrary code, that’s a textbook privilege escalation.
+In short: low is a sandbox, medium is your everyday user space, high is "Run as Administrator," and system is the service layer. When a medium integrity process can directly influence a system integrity process to execute arbitrary code.
+
 
 ![Integrity diagram](</images/Pasted image 20251017101112.png>)
 
