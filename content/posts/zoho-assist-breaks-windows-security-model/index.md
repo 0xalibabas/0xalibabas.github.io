@@ -11,7 +11,6 @@ This was the case with the Zoho Assist unattended agent. What appears to be a st
 
 So, for this first post, I'll say why you should not neglect security boundaries and explain why the presence of the Zoho agent should be treated as a direct local privilege escalation.
 
-![Zoho Assist UI](</images/Pasted image 20251017100314.png>)
 
 ### **Why this matters**
 
